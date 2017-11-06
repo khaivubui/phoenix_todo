@@ -1,7 +1,7 @@
-defmodule SimpleTodoWeb.PageController do
+defmodule SimpleTodoWeb.TodoController do
   use SimpleTodoWeb, :controller
 
   def index(conn, _params) do
-    render conn, "index.html"
+    render conn, :index
   end
 end
