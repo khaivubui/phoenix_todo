@@ -1,3 +1,7 @@
 <h2>
   <%= @todo.description %>
 </h2>
+
+<%= button "Back to Home", to: todo_path(@conn, :index),
+                           method: "get",
+                           class: "shadow blue center"%>
