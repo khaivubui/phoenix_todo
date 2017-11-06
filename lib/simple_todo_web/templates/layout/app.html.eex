@@ -15,9 +15,7 @@
   <body>
     <div class="container">
       <header>
-        <%= link to: todo_path(@conn, :index) do %>
-          <h1>Simple Todo App</h1>
-        <% end %>
+        <h1>Simple Todo App</h1>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
