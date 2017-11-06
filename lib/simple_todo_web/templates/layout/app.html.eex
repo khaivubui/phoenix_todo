@@ -8,8 +8,8 @@
     <meta name="author" content="">
 
     <title>Hello SimpleTodo!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/reset.css") %>">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   </head>
 
   <body>
