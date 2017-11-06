@@ -1,6 +1,7 @@
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  color: #557;
 }
 
 .container {
@@ -11,4 +12,8 @@ html {
 h1 {
   font-weight: 300;
   text-align: center;
+}
+
+header {
+  border-bottom: 1px solid #AAA;
 }
