@@ -1,0 +1,5 @@
+<%= Enum.map @todos, fn t -> %>
+  <div class="todo">
+    <%= t.description %>
+  </div>
+<% end %>
