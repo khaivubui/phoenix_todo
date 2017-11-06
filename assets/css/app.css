@@ -121,6 +121,7 @@ button {
 	margin: 20px 0;
 	cursor: pointer;
 	font-size: 1em;
+	outline: none;
 }
 
 a {
