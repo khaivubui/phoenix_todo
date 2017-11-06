@@ -5,6 +5,6 @@ defmodule SimpleTodoWeb.TodoController do
 
   def index(conn, _params) do
     todos = Repo.all(from t in Todo, order_by: t.id)
-    render conn, :index
+    render conn, :index, todos: todos
   end
 end
