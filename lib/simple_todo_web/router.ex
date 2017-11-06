@@ -15,7 +15,7 @@ defmodule SimpleTodoWeb.Router do
 
   scope "/", SimpleTodoWeb do
     pipe_through :browser # Use the default browser stack
-    resources "/", TodoController
+    resources "/", TodoController, except: [:new]
   end
 
   # Other scopes may use custom stacks.

@@ -5,7 +5,9 @@ defmodule SimpleTodoWeb.TodoController do
 
   def index conn, _params do
     todos = Repo.all(from t in Todo, order_by: t.id)
-    render conn, :index, todos: todos
+    changeset = Todo.changeset %Todo{}
+    
+    render conn, :index, todos: todos, changeset: changeset
   end
 
   def show conn, %{"id" => todo_id} do
