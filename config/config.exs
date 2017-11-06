@@ -15,7 +15,8 @@ config :simple_todo, SimpleTodoWeb.Endpoint,
   secret_key_base: "HZMS4y3GsFiLnsIyLuy0U3dTGIaVmRQ+xPNFcx0qzDUJx212y9XRpDFF2br/p+lA",
   render_errors: [view: SimpleTodoWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: SimpleTodo.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+           adapter: Phoenix.PubSub.PG2],
+  http: [protocol_options: [max_request_line_length: 8192, max_header_value_length: 8192]]
 
 # Configures Elixir's Logger
 config :logger, :console,
