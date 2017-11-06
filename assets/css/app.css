@@ -17,3 +17,32 @@ h1 {
 header {
   border-bottom: 1px solid #AAA;
 }
+
+.todo {
+  padding: 15px 25px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* --------- Colors --------- */
+
+.blue {
+  background: #3498db;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.blue:hover {
+  background: #429fde;
+}
+
+/* --------- Shadow --------- */
+
+.box-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s;
+}
+
+.box-shadow:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
+}
