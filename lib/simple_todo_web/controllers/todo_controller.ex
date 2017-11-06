@@ -3,8 +3,13 @@ defmodule SimpleTodoWeb.TodoController do
   alias SimpleTodo.Repo
   import Ecto.Query
 
-  def index(conn, _params) do
+  def index conn, _params do
     todos = Repo.all(from t in Todo, order_by: t.id)
     render conn, :index, todos: todos
+  end
+
+  def show conn, %{"id" => todo_id} do
+    todo = Repo.get Todo, todo_id
+    render conn, :show, todo: todo
   end
 end

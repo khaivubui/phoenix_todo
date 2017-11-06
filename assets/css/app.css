@@ -72,11 +72,21 @@ header {
   margin-bottom: 10px;
 }
 
+/* --------- index --------- */
+
 .todo {
   padding: 20px 25px;
   border-radius: 15px;
   cursor: pointer;
   margin: 20px 0;
+}
+
+/* --------- show --------- */
+
+h2 {
+	margin-top: 20px;
+	font-size: 2em;
+	font-weight: 600;
 }
 
 /* --------- Colors --------- */
