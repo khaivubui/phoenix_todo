@@ -64,10 +64,12 @@ defmodule SimpleTodoWeb.TodoController do
   end
 
   def toggle_completed conn, %{"id" => todo_id} do
-    Repo.get(Todo, todo_id)
+    todo = Repo.get(Todo, todo_id)
+
+    todo
     |> Todo.changeset(%{completed: !todo.completed})
     |> Repo.update
-    
+
     conn |> redirect(to: conn.request_path)
   end
 end
