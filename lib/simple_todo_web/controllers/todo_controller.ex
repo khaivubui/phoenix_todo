@@ -32,7 +32,11 @@ defmodule SimpleTodoWeb.TodoController do
     end
   end
 
-  def delete conn, params do
+  def delete conn, %{"id" => todo_id} do
+    Repo.get(Todo, todo_id) |> Repo.delete
 
+    conn
+    |> put_flash(:info, "Todo Deleted")
+    |> redirect(to: todo_path(conn, :index))
   end
 end
