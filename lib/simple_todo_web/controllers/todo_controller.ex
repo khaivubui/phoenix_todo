@@ -16,6 +16,8 @@ defmodule SimpleTodoWeb.TodoController do
   end
 
   def create conn, %{"todo" => todo} do
+    todos = Repo.all(from t in Todo, order_by: t.id)
+
     %Todo{}
     |> Todo.changeset(todo)
     |> Repo.insert()
@@ -26,7 +28,7 @@ defmodule SimpleTodoWeb.TodoController do
         |> redirect(to: todo_path(conn, :index))
       {:error, changeset} ->
         conn
-        |> render(:index, changeset: changeset)
+        |> render(:index, todos: todos, changeset: changeset)
     end
   end
 end
