@@ -84,6 +84,10 @@ header {
 	align-items: center;
 }
 
+.checkbox {
+	margin-right: 10px;
+}
+
 .new-form {
 	display: inline-block;
 }
