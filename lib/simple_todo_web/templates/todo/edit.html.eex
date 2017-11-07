@@ -1,6 +1,12 @@
 <h2>
-  <%= @todo.description %>
+  <%= form_for @changeset, todo_path(@conn, :update, @todo), fn f -> %>
+  <%= text_input f, :description, placeholder: "Description",
+                                  autofocus: true,
+                                  onfocus: "this.select()" %>
+  <%= error_tag f, :description %>
 </h2>
+  <%= submit "Update Todo", class: "box-shadow green" %>
+  <% end %>
 
 <%= button "Cancel", to: todo_path(@conn, :show, @todo),
                      method: "get",
