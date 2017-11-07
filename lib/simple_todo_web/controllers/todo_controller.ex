@@ -62,4 +62,11 @@ defmodule SimpleTodoWeb.TodoController do
     |> put_flash(:info, "Todo Deleted")
     |> redirect(to: todo_path(conn, :index))
   end
+
+  def toggle_completed conn, %{"id" => todo_id} do
+    todo = Repo.get(Todo, todo_id)
+    changeset = todo |> Todo.changeset(%{completed: !todo.completed})
+    Repo.update(changeset)
+    conn |> redirect(to: conn.request_path)
+  end
 end

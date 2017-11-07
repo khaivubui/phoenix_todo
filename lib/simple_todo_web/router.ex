@@ -16,6 +16,7 @@ defmodule SimpleTodoWeb.Router do
   scope "/", SimpleTodoWeb do
     pipe_through :browser # Use the default browser stack
     resources "/", TodoController, except: [:new]
+    patch "/:id/toggle_completed", TodoController, :toggle_completed
   end
 
   # Other scopes may use custom stacks.
