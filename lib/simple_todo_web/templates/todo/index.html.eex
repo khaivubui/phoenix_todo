@@ -1,6 +1,6 @@
 <%= Enum.map @todos, fn t -> %>
   <%= link to: todo_path(@conn, :show, t) do %>
-    <div class="todo box-shadow blue">
+    <div class="todo blue">
       <%= t.description %>
     </div>
   <% end %>
@@ -10,5 +10,5 @@
                          [class: "new-form center"], fn f -> %>
   <%= text_input f, :description, placeholder: "Description" %>
   <%= error_tag f, :description %>
-  <%= submit "Add Todo", class: "blue" %>
+  <%= submit "Add Todo", class: "green" %>
 <% end %>

@@ -105,6 +105,15 @@ h2 {
   background: #429fde;
 }
 
+.green {
+	background: #16a085;
+	color: white;
+	transition: background-color 0.3s;
+}
+
+.green:hover {
+	background: #1abe9e;
+}
 /* --------- Shadow --------- */
 
 .box-shadow {
