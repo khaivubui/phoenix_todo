@@ -1,0 +1,11 @@
+<h2>
+  <%= @todo.description %>
+</h2>
+
+<%= button "Cancel", to: todo_path(@conn, :show, @todo),
+                     method: "get",
+                     class: "box-shadow" %>
+
+<%= button "Back to Home", to: todo_path(@conn, :index),
+                           method: "get",
+                           class: "box-shadow blue center"%>

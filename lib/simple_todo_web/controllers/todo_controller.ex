@@ -15,6 +15,12 @@ defmodule SimpleTodoWeb.TodoController do
     render conn, :show, todo: todo
   end
 
+  def edit conn, %{"id" => todo_id} do
+    todo = Repo.get Todo, todo_id
+    changeset =  Todo.changeset todo
+    render conn, :edit, changeset: changeset, todo: todo
+  end
+
   def create conn, %{"todo" => todo} do
     todos = Repo.all(from t in Todo, order_by: t.id)
 
