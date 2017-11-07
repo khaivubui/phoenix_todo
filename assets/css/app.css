@@ -147,3 +147,11 @@ a {
 	margin-right: auto;
 	display: block;
 }
+
+input[type=text] {
+	border: none;
+	font-size: 1em;
+	padding: 10px 0px;
+	border-bottom: 1px solid #AAA;
+	outline: none;
+}
