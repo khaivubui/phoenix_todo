@@ -3,9 +3,9 @@
     <div class="todo box-shadow blue">
       <i class="material-icons checkbox">
         <%= if t.completed do %>
-        check_box
+        check
         <% else %>
-        check_box_outline_blank
+        remove
         <% end %>
       </i>
 
