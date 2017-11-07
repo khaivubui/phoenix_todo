@@ -8,7 +8,8 @@
 
 <%= button "Delete", to: todo_path(@conn, :delete, @todo),
                      method: "delete",
-                     class: "box-shadow red" %>
+                     class: "box-shadow red",
+                     data: [confirm: "Are you sure?"] %>
 
 <%= button "Back to Home", to: todo_path(@conn, :index),
                            method: "get",
