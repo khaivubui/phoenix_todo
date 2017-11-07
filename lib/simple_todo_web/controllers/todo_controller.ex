@@ -31,4 +31,8 @@ defmodule SimpleTodoWeb.TodoController do
         |> render(:index, todos: todos, changeset: changeset)
     end
   end
+
+  def delete conn, params do
+
+  end
 end

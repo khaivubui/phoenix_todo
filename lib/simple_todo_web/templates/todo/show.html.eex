@@ -2,6 +2,10 @@
   <%= @todo.description %>
 </h2>
 
+<%= button "Delete", to: todo_path(@conn, :delete, @todo),
+                     method: "delete",
+                     class: "box-shadow blue" %>
+
 <%= button "Back to Home", to: todo_path(@conn, :index),
                            method: "get",
-                           class: "shadow blue center"%>
+                           class: "box-shadow blue center"%>
