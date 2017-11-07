@@ -66,10 +66,10 @@ defmodule SimpleTodoWeb.TodoController do
   def toggle_completed conn, %{"id" => todo_id} do
     todo = Repo.get(Todo, todo_id)
 
-    todo
+    {:ok, todo} = todo
     |> Todo.changeset(%{completed: !todo.completed})
     |> Repo.update
 
-    conn |> redirect(to: conn.request_path)
+    conn |> redirect(to: todo_path(conn, :show, todo))
   end
 end

@@ -1,11 +1,14 @@
 <h2>
-  <i class="material-icons checkbox">
-    <%= if @todo.completed do %>
-    check_box
-    <% else %>
-    check_box_outline_blank
-    <% end %>
-  </i>
+  <%= link to: todo_path(@conn, :toggle_completed, @todo) do %>
+    <i class="material-icons checkbox">
+      <%= if @todo.completed do %>
+      check_box
+      <% else %>
+      check_box_outline_blank
+      <% end %>
+    </i>
+  <% end %>
+
   <%= @todo.description %>
 </h2>
 
