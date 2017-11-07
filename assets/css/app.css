@@ -76,7 +76,7 @@ header {
 
 .todo {
   padding: 20px 25px;
-  border-radius: 15px;
+  border-radius: 5px;
   cursor: pointer;
   margin: 20px 0;
 }
@@ -102,7 +102,7 @@ h2 {
 }
 
 .blue:hover {
-  background: #429fde;
+  background: #50a6e1;
 }
 
 .green {
