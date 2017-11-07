@@ -38,6 +38,23 @@ defmodule SimpleTodoWeb.TodoController do
     end
   end
 
+  def update conn, %{"todo" => todo_data, "id" => todo_id} do
+    todo = Repo.get(Todo, todo_id)
+
+    todo
+    |> Todo.changeset(todo_data)
+    |> Repo.update
+    |> case do
+      {:ok, _} ->
+        conn
+        |> put_flash(:info, "Topic Updated")
+        |> redirect(to: todo_path(conn, :show, todo))
+      {:error, changeset} ->
+        conn
+        |> render(:edit, changeset: changeset, todo: todo)
+    end
+  end
+
   def delete conn, %{"id" => todo_id} do
     Repo.get(Todo, todo_id) |> Repo.delete
 
