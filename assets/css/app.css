@@ -70,7 +70,7 @@ h1 {
 header {
   border-bottom: 1px solid #AAA;
   padding: 20px 0;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 /* --------- index --------- */
@@ -79,7 +79,7 @@ header {
   padding: 20px 25px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 10px 0;
 	display: flex;
 	align-items: center;
 }
