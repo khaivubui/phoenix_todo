@@ -81,6 +81,10 @@ header {
   margin: 20px 0;
 }
 
+.new-form {
+	display: inline-block;
+}
+
 /* --------- show --------- */
 
 h2 {
