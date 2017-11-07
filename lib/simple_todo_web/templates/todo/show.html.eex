@@ -4,7 +4,7 @@
 
 <%= button "Delete", to: todo_path(@conn, :delete, @todo),
                      method: "delete",
-                     class: "box-shadow blue" %>
+                     class: "box-shadow red" %>
 
 <%= button "Back to Home", to: todo_path(@conn, :index),
                            method: "get",
