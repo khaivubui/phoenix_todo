@@ -1,4 +1,11 @@
 <h2>
+  <i class="material-icons checkbox">
+    <%= if @todo.completed do %>
+    check_box
+    <% else %>
+    check_box_outline_blank
+    <% end %>
+  </i>
   <%= @todo.description %>
 </h2>
 
