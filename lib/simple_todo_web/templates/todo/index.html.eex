@@ -1,9 +1,9 @@
 <%= Enum.map @todos, fn t -> %>
   <%= link to: todo_path(@conn, :show, t) do %>
     <div class="todo box-shadow blue">
-      <%= t.description %>
       <i class="material-icons">check_box</i>
       <i class="material-icons">check_box_outline_blank</i>
+      <%= t.description %>
     </div>
   <% end %>
 <% end %>
