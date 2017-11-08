@@ -61,4 +61,20 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
+
+config :simple_todo, SimpleTodoWeb.Endpoint,
+  load_from_system_env: true,
+  url: [host: "example.com", port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json"
+
+config :simple_todo, SimpleTodo.Endpoint,
+  server: true,
+  secret_key_base: "${SECRET_KEY_BASE}"
+
+config :simple_todo, SimpleTodo.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: "${DATABASE_URL}",
+  database: "",
+  ssl: true,
+  pool_size: 10
