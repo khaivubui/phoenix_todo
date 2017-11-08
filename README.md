@@ -2,7 +2,7 @@
 
 [live](https://hopeful-vigorous-katydid.gigalixirapp.com/)
 
-![preview](phoenix_todo/docs/Screen Shot 2017-11-07 at 7.45.08 PM.png)
+![preview](https://raw.githubusercontent.com/khaivubui/phoenix_todo/master/docs/Screen%20Shot%202017-11-07%20at%207.45.08%20PM.png)
 
 To start your Phoenix server:
 
