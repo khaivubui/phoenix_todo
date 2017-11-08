@@ -75,6 +75,6 @@ config :simple_todo, SimpleTodo.Endpoint,
 config :simple_todo, SimpleTodo.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: "${DATABASE_URL}",
-  database: "simple_todo",
+  database: "",
   ssl: true,
   pool_size: 10
