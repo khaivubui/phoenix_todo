@@ -106,7 +106,7 @@ h2 {
 .blue {
   background: #3498db;
   color: white;
-  transition: background-color 0.3s;
+  transition-duration: 0.5s;
 }
 
 .blue:hover {
@@ -116,7 +116,7 @@ h2 {
 .green {
 	background: #16a085;
 	color: white;
-	transition: background-color 0.3s;
+	transition-duration: 0.5s;
 }
 
 .green:hover {
@@ -135,7 +135,7 @@ h2 {
 
 .box-shadow {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  transition: box-shadow 0.3s;
+  transition-duration: 0.5s;
 }
 
 .box-shadow:hover {
